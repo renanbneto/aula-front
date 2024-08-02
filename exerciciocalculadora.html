@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Calculadora</title>
+    
+    <style>
+        body {
+            font-family: sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: gray;
+            margin: 0;
+        }
+
+        .calculadora {
+            width: 260px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .display {
+            background-color: black;
+            color: white;
+            text-align: right;
+            padding: 20px;
+            font-size: 2em;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+        .regra {
+            background-color:darkorange;
+        }
+        .display input {
+            width: 100%;
+            background: none;
+            border: none;
+            color: white;
+            text-align: right;
+            font-size: 2em;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .botoes {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1px;
+        }
+
+        button {
+            padding: 20px;
+            font-size: 1.5em;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: grey;
+        }
+
+        button:active {
+            background-color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="calculadora">
+        <div class="display">
+            <input type="texto">
+        </div>
+        <div class="botoes">
+            <button class="regra">AC</button>
+            <button class="regra">+/-</button>
+            <button class="regra">%</button>
+            <button class="regra">/</button>
+            <button>7</button>
+            <button>8</button>
+            <button>9</button>
+            <button class="regra">X</button>
+            <button>4</button>
+            <button>5</button>
+            <button>6</button>
+            <button class="regra">-</button>
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+            <button class="regra">+</button>
+            <button class="zero">0</button>
+            <button class="regra">,</button>
+            <button class="regra">=</button>
+            
+        </div>
+    </div>
+</body>
+</html>
