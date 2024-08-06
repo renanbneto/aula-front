@@ -2,7 +2,7 @@
 
 function botao ()
 {
-    //alert(nome)
+    //alert(valor)
     console.log(valor.value);
 
 }
