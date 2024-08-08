@@ -20,6 +20,12 @@ function oi ()
 
 //4 - some o numero 1 com o numero 2
 
+//5 - calcular o imc ( peso / (altura x altura) 
+
+//6 - verifique o o maior entre dois numeros inseridos
+
+//7 - pegue a idade e diga se é criança adulto ou idoso
+
 function ex1()
 {
 
@@ -43,5 +49,51 @@ function ex4()
 {
     var primeiro = num1.value;
     var segundo = num2.value;
-    saida.value = primeiro + segundo;
+    saida.value = parseInt(primeiro) + parseInt(segundo);
+}
+//errado
+function ex5()
+{
+    var peso = num1.value;
+    var altura = num2.value;
+    var multiplicacao = parseFloat(altura) * parseFloat(altura);
+    var divisao = parseInt(peso) / multiplicacao
+    saida.value = divisao;
+}
+
+function ex6()
+{
+    var n1 = num1.value;
+    var n2 = num2.value;
+
+    n1 = parseInt(n1);
+    n2 = parseInt(n2);
+
+    if (n1 > n2)
+    {
+        saida.value = n1;
+    }
+    else
+    {
+        saida.value = n2;
+    }
+}
+
+
+function ex7()
+{
+    var idade = num1.value;
+    
+    if (idade >= 60)
+    {
+        saida.value = "idoso";
+    } else if (idade >= 18)
+    {
+        saida.value = "adulto";
+    } else
+        {
+            saida.value = "crianca"
+        }
+  
+
 }
