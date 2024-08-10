@@ -24,13 +24,11 @@ jQuery(document).ready(function () {
                 alert("Esta cidade já foi cadastrada!");
             }
 
+                
             
-            else (cidade == "")
-            {
-                alert("Por favor, insira uma cidade!");
-            }
 
-        });
+        }
+    });
 
 });
 
