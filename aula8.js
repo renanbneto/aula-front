@@ -1,35 +1,24 @@
 
 
-jQuery(document).ready(function () {
-
+$(document).ready(function()
+{
     jQuery("h1").css("color", "red");
 
-    jQuery(".bt-add").click(function () {
-
+    $(".bt-add").click(function()
+    {
         var cidade = $("#cidade").val();
-
         var lista = $("#lista").html();
 
-        if (cidade != "") {
-            if (lista.search(cidade) == -1) {
-
-                jQuery("#lista").append("<li>" + cidade);
-
-                $("#cidade").val("");
-
-            }
-
-            else (lista == lista)
+        // add somente se o valor não for vazio
+        if (cidade != "")
+        {
+            // add somente se não foi adicionado antes
+            if (lista.search(cidade) == -1)
             {
-                alert("Esta cidade já foi cadastrada!");
+                $("#lista").append("<li>"+ cidade +"</li>");
+                $("#cidade").val("");
             }
-
-                
-            
-
         }
     });
 
 });
-
-
