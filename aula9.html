@@ -6,8 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>bootstrap</title>
     <link href="bootstrap/css/bootstrap.css" rel="stylesheet" />
-    <script src="jquery-3.7.1.js"></script>
+    <script src="jquery-3.7.1.min.js"></script>
+
     <script src="aula9.js"></script>
+
 </head>
 <body>
     
@@ -26,47 +28,53 @@
                 <div class="row">
                     <div class="col">
                         <label class="form-label">Nome paciente</label>
-                        <input id="paciente" class="form-control is invalid" type="text" placeholder="Pretinha" />
+                        <input id="paciente" class="form-control" type="text" placeholder="Pretinha" />
+                        <div class="invalid-feedback">Campo obrigatório</div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col">
                         <label class="form-label">Nome Tutor</label>
-                        <input class="form-control" type="text" />
+                        <input id="tutor" class="form-control" type="text" />
+                        <div class="invalid-feedback">Campo obrigatório</div>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-4">
+                    <div class="col-4">  
                         <label class="form-label">Telefone</label>
-                        <input class="form-control" type="text" />
+                        <input id="telefone" class="form-control" type="text" required placeholder="(xx) xxxxx-xxxx" />
+                        <div class="invalid-feedback">Campo obrigatório</div>
                     </div>
                     <div class="col-2">
                         <label class="form-label">Idade</label>
-                        <input class="form-control" type="text" />
+                        <input id="idade" class="form-control" type="text" />
+                        <div class="invalid-feedback">Campo obrigatório</div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col">
                         <label class="form-label">Sexo</label>
                         <div class="form-check">
-                            <input name="sexo" class="form-check-input" type="radio" />
+                            <input id="sexo-m" name="sexo" value="M" class="form-check-input sexo" type="radio" />
                             <label class="form-check-label" >Macho</label>
                         </div>
                         <div class="form-check">
-                            <input name="sexo" class="form-check-input" type="radio" />
+                            <input id="sexo-f" name="sexo" value="F" class="form-check-input sexo" type="radio" />
                             <label class="form-check-label">Fêmea</label>
                         </div>
+                        <div class="invalid-feedback">Campo obrigatório</div>
 
                     </div>
                     <div class="col">
-                        <label id="servico" class="form-label">Tipo de Serviço</label>
-                        <select class="form-select">
+                        <label class="form-label">Tipo de Serviço</label>
+                        <select id="servico" class="form-select">
                             <option value="0"> -- Selecione --</option>
                             <option value="10">Consulta</option>
                             <option value="11">Banho e Tosa</option>
                             <option value="12">Internamento</option>
                             <option value="13">Exames</option>
                         </select>
+                        <div class="invalid-feedback">Campo obrigatório</div>
                     </div>
                 </div>
                 <hr />

@@ -1,11 +1,11 @@
 
 $(document).ready(function(){
 
-    $("servico").change(function(){
+    $("#servico").change(function(){
         var valor = $(this).val();
-
+        
         $("#form-consulta, #form-banho, #form-internamento, #form-exames").addClass("d-none");
-
+        
         if (valor == 10)
         {
             $("#form-consulta").removeClass("d-none");
@@ -20,13 +20,42 @@ $(document).ready(function(){
             $("#form-exames").removeClass("d-none");
         }
 
-    });
+    }); // fim do change servico
 
-    $("#bt-salvar").click(function());
+    $("#bt-salvar").click(function(){
 
-        if($("#paciente").val() == "")
+        $("input, select").removeClass("is-invalid");
+
+        if ($("#paciente").val().trim() == "")
         {
-            alert("Nome do paciente é obrigatório!")
+            $("#paciente").addClass("is-invalid");
         }
 
-});
+        if ($("#tutor").val().trim() == "")
+        {
+            $("#tutor").addClass("is-invalid");
+        }
+
+        if ($("#idade").val().trim() == "")
+        {
+            $("#idade").addClass("is-invalid");
+        }
+        
+        if ($("#telefone").val().trim() == "")
+        {
+            $("#telefone").addClass("is-invalid");
+        }
+
+        if ($("#servico").val() == "0")
+        {
+            $("#servico").addClass("is-invalid");
+        }
+
+        if ($(".sexo:checked").length == 0)
+        {
+            $(".sexo").addClass("is-invalid");
+        }
+
+    }); // fim bt-salvar
+
+}); // fim document ready
